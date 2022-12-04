@@ -14,7 +14,7 @@ import Sensors_data
 
 @app.route('/')
 def index():
-    return jsonify({"Tarea 3 Arquitectura Emergente"})
+    return jsonify("Tarea 3 Arquitectura Emergente")
 #API's
 
 #API's de Usuarios
