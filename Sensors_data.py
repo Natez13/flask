@@ -67,9 +67,9 @@ def get_data(current_company_api_key,current_company_id,current_user,):
                     sensors_data["temperature "] = j["temperature"]
                     Sensors_data_collention.append(sensors_data)
 
-                resp = jsonify(Sensors_data_collention)
-                resp.status_code = 201  
-                return resp
+            resp = jsonify(Sensors_data_collention)
+            resp.status_code = 201  
+            return resp
         except:
 
             resp = jsonify('Error to obtain info of the Sensor ')
