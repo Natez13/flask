@@ -69,7 +69,7 @@ def get_data(current_company_api_key,current_company_id,current_user,):
     to_date = request.args.get('to')
     company_id = request.args.get('company_id')
     sensor_id_list = literal_eval(sensor_id)
-    counter = list()
+    #counter = list()
     if int(current_company_id) == int(company_id):
         try:
             Sensors_data_collention = []
@@ -81,7 +81,7 @@ def get_data(current_company_api_key,current_company_id,current_user,):
                 conn.close()
 
                 Sensors_data_id = []
-                counter.append(sql)
+                #counter.append(sql)
                 for j in rows:
                     sensors_data = {}
                     sensors_data["sensor_id "] = j["sensor_id"]
@@ -91,7 +91,7 @@ def get_data(current_company_api_key,current_company_id,current_user,):
                 Sensors_data_collention.append(Sensors_data_id)
                         
 
-            resp = jsonify(Sensors_data_collention,counter)
+            resp = jsonify(Sensors_data_collention)
             resp.status_code = 201  
             return resp
         except:
