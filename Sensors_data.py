@@ -7,6 +7,7 @@ from datetime import datetime
 from ast import literal_eval
 
 #API's de sensors_data
+
 @app.route('/api/v1/sensor_data/send',methods=['POST'])
 @token_required
 @api_sensor_req
